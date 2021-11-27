@@ -32,59 +32,55 @@
   - [Notes](#notes)
 
 # Prerequisites
-Machine learning essentially involves a ton of trial and error. You're letting a program try millions of different settings to land on an algorithm that sort of does what you want it to do. This process is really really slow unless you have the hardware required to speed this up. 
-
-The type of computations that the process does are well suited for graphics cards, rather than regular processors. **It is pretty much required that you run the training process on a desktop or server capable GPU.** Running this on your CPU means it can take weeks to train your model, compared to several hours on a GPU.
+机器学习本质上涉及大量的试验和错误。你让一个程序尝试数以百万计的不同设置，以找到一种算法，做你想做的事。这个过程真的很慢，除非你有加速这个过程所需的硬件。
+这个过程所做的计算类型很适合显卡，而不是普通的处理器。**几乎要求你在台式机或服务器上运行训练过程，**在CPU上运行意味着可能需要几周时间来训练你的模型，而在GPU上则需要几小时。
 
 ## Hardware Requirements
 **TL;DR: you need at least one of the following:**
 
 - **A powerful CPU**
-    - Laptop CPUs can often run the software, but will not be fast enough to train at reasonable speeds
+    - notebook的CPU通常可以运行软件，但不会快到足以以合理的速度进行训练。
 - **A powerful GPU**
-    - Currently, Nvidia GPUs are fully supported. and AMD graphics cards are partially supported through plaidML.
-    - If using an Nvidia GPU, then it needs to support at least CUDA Compute Capability 3.5. (Release 1.0 will work on Compute Capability 3.0)
-      To see which version your GPU supports, consult this list: https://developer.nvidia.com/cuda-gpus
-      Desktop cards later than the 7xx series are most likely supported.
+    - 目前，Nvidia的GPU被完全支持。而AMD的显卡通过plaidML被部分支持。
+    - 如果使用Nvidia GPU，那么它至少需要支持CUDA计算能力3.5。(1.0版将在计算能力3.0上工作)
+      要看你的GPU支持哪个版本，请参考这个列表：https://developer.nvidia.com/cuda-gpus
+      晚于7xx系列的桌面卡很可能被支持。
 - **A lot of patience**
 
 ## Supported operating systems
 - **Windows 10**
-  Windows 7 and 8 might work. Your mileage may vary. Windows has an installer which will set up everything you need. See: https://github.com/deepfakes/faceswap/releases
+ Windows 7和8可能工作。你的情况可能有所不同。Windows有一个安装程序，将设置你需要的一切。见：https://github.com/deepfakes/faceswap/releases
 - **Linux**
-  Most Ubuntu/Debian or CentOS based Linux distributions will work.
+  大多数基于Ubuntu/Debian或CentOS的Linux发行版都可以使用。
 - **macOS**
-  GPU support on macOS is limited due to lack of drivers/libraries from Nvidia.
-- All operating systems must be 64-bit for Tensorflow to run.
+  由于缺乏Nvidia的驱动/库，MacOS上的GPU支持是有限的。
+- 所有的操作系统必须是64位的，才能运行Tensorflow。
 
-Alternatively, there is a docker image that is based on Debian.
+另外，也有一个基于Debian的docker镜像。
 
 # Important before you proceed
-**In its current iteration, the project relies heavily on the use of the command line, although a gui is available. if you are unfamiliar with command line tools, you may have difficulty setting up the environment and should perhaps not attempt any of the steps described in this guide.** This guide assumes you have intermediate knowledge of the command line. 
-
-The developers are also not responsible for any damage you might cause to your own computer.
+**如果你不熟悉命令行工具，你可能很难设置环境，也许不应该尝试本指南中描述的任何步。
+开发商也不对你可能对自己的电脑造成的任何损害负责。
 
 # Linux and Windows Install Guide
 
 ## Installer
-Windows and Linux now both have an installer which installs everything for you and creates a desktop shortcut to launch straight into the GUI. You can download the installer from https://github.com/deepfakes/faceswap/releases.
-
-If you have issues with the installer then read on for the more manual way to install faceswap on Windows.
+Windows和Linux现在都有一个安装程序，为你安装一切，并创建一个桌面快捷方式，直接进入图形用户界面。你可以从 https://github.com/deepfakes/faceswap/releases 下载该安装程序。
+如果你对安装程序有疑问，请继续阅读在Windows上安装facewap的更多手动方法。
 
 ## Manual Install
-
-Setting up faceswap can seem a little intimidating to new users, but it isn't that complicated, although a little time consuming. It is recommended to use Linux where possible as Windows will hog about 20% of your GPU Memory, making faceswap run a little slower, however using Windows is perfectly fine and 100% supported.
+设置换脸对新用户来说似乎有点吓人，但它并不复杂，虽然有点耗时。建议在可能的情况下使用Linux，因为Windows会占用你20%的GPU内存，使facewap运行得慢一些，但是使用Windows是完全可以的，而且100%支持。
 
 ## Prerequisites
 
 ### Anaconda
-Download and install the latest Python 3 Anaconda from: https://www.anaconda.com/download/. Unless you know what you are doing, you can leave all the options at default.
+下载并安装最新的Python 3 Anaconda，地址是：https://www.anaconda.com/download/。除非你知道你在做什么，否则你可以把所有的选项都留在默认状态。
 
 ### Git
-Download and install Git for Windows: https://git-scm.com/download/win. Unless you know what you are doing, you can leave all the options at default.
+下载并安装 Windows 版的 Git：https://git-scm.com/download/win。除非你知道自己在做什么，否则可以把所有的选项都放在默认状态。
 
 ## Setup
-Reboot your PC, so that everything you have just installed gets registered.
+重新启动你的电脑，这样你刚刚安装的所有东西都会被注册。
 
 ### Anaconda
 #### Set up a virtual environment
@@ -114,8 +110,8 @@ To enter the virtual environment:
 - If you have issues/errors follow the Manual install steps below.
 
 #### Manual install
-Do not follow these steps if the Easy Install above completed succesfully.
-If you are using an Nvidia card make sure you have the correct versions of Cuda/cuDNN installed for the required version of Tensorflow
+如果上面的简易安装成功完成，请不要按照这些步进行。
+如果你使用的是Nvidia显卡，请确保你为所需版本的Tensorflow安装了正确的Cuda/cuDNN版本。
 - Install tkinter (required for the GUI) by typing: `conda install tk`
 - Install requirements:
   - For Nvidia GPU users: `pip install -r requirements_nvidia.txt`
@@ -123,65 +119,64 @@ If you are using an Nvidia card make sure you have the correct versions of Cuda/
   - For CPU users: `pip install -r requirements_cpu.txt`
 
 ## Running faceswap
-- If you are not already in your virtual environment follow [these steps](#entering-your-virtual-environment)
-- Enter the faceswap folder: `cd faceswap`
-- Enter the following to see the list of commands: `python faceswap.py -h` or enter `python faceswap.py gui` to launch the GUI
+- 如果你还没有进入你的虚拟环境，请按照[这些步](#entering-your-virtual-environment)
+- 进入 faceswap 文件夹。`cd faceswap`。
+- 输入以下内容查看命令列表： `python faceswap.py -h`或输入`python faceswap.py gui`启动GUI
 
 ## Create a desktop shortcut
-A desktop shortcut can be added to easily launch straight into the faceswap GUI:
+可以添加一个桌面快捷方式，方便直接启动换脸图形用户界面。
 
 - Open Notepad
 - Paste the following:
 ```
 %USERPROFILE%\Anaconda3\envs\faceswap\python.exe %USERPROFILE%/faceswap/faceswap.py gui
 ```
-- Save the file to your desktop as "faceswap.bat"
+- 将文件保存在桌面上，称为 "faceswap.bat"。
 
 ## Updating faceswap
-It's good to keep faceswap up to date as new features are added and bugs are fixed. To do so:
-- If using the GUI you can go to the Help menu and select "Check for Updates...". If updates are available go to the Help menu and select "Update Faceswap". Restart Faceswap to complete the update.
-- If you are not already in your virtual environment follow [these steps](#entering-your-virtual-environment)
-- Enter the faceswap folder: `cd faceswap`
-- Enter the following `git pull --all`
-- Once the latest version has downloaded, make sure your dependencies are up to date. There is a script to help with this: `python update_deps.py`
+随着新特征的增加和错误的修复，保持facewap的最新状态是很好的。要做到这一点。
+- 如果使用图形用户界面，你可以进入帮助菜单，选择 "检查更新..."。如果有更新，请到帮助菜单中选择 "更新Faceswap"。重新启动Faceswap以完成更新。
+- 如果你还没有进入你的虚拟环境，请按照[这些步](#entering-your-virtual-environment)
+- 进入 faceswap 文件夹。`cd faceswap`。
+- 输入以下内容 `git pull --all`。
+- 一旦下载了最新的版本，确保你的依赖关系是最新的。有一个脚本可以帮助解决这个问题。`python update_deps.py`。
 
 # General Install Guide
 ## Installing dependencies
 ### Git
-Git is required for obtaining the code and keeping your codebase up to date.
-Obtain git for your distribution from the [git website](https://git-scm.com/downloads).
+获取代码和保持代码库的更新需要用到Git。
+从[git网站](https://git-scm.com/downloads)为你的发行版获取git。
+
 
 ### Python
-The recommended install method is to use a Conda3 Environment as this will handle the installation of Nvidia's CUDA and cuDNN straight into your Conda Environment. This is by far the easiest and most reliable way to setup the project.
-  - MiniConda3 is recommended: [MiniConda3](https://docs.conda.io/en/latest/miniconda.html)
+推荐的安装方法是使用Conda3环境，因为这将处理Nvidia的CUDA和cuDNN直接安装到你的Conda环境。这是迄今为止安装项目的最简单和最可靠的方法。
+- MiniConda3 is recommended: [MiniConda3](https://docs.conda.io/en/latest/miniconda.html)
   
-Alternatively you can install Python (>= 3.7-3.8 64-bit) for your distribution (links below.) If you go down this route and are using an Nvidia GPU you should install CUDA (https://developer.nvidia.com/cuda-zone) and cuDNN (https://developer.nvidia.com/cudnn). for your system. If you do not plan to build Tensorflow yourself, make sure you install the correct Cuda and cuDNN package for the currently installed version of Tensorflow (Current release: Tensorflow 2.2. Release v1.0: Tensorflow 1.15). You can check for the compatible versions here: (https://www.tensorflow.org/install/source#gpu).
-  - Python distributions:
+或者，你可以为你的发行版安装Python（>=3.7-3.8 64位）（下面的链接）。如果你走这条路并且使用Nvidia GPU，你应该为你的系统安装CUDA（https://developer.nvidia.com/cuda-zone）和cuDNN（https://developer.nvidia.com/cudnn）。如果你不打算自己构建Tensorflow，请确保为当前安装的Tensorflow版本安装正确的Cuda和cuDNN包（当前版本：Tensorflow 2.2。 v1.0版本：Tensorflow 1.15）。你可以在这里检查兼容的版本。(https://www.tensorflow.org/install/source#gpu)。
+    - Python distributions:
     - apt/yum install python3 (Linux)
     - [Installer](https://www.python.org/downloads/release/python-368/) (Windows)
     - [brew](https://brew.sh/) install python3 (macOS)
 
 ### Virtual Environment
-  It is highly recommended that you setup faceswap inside a virtual environment. In fact we will not generally support installations that are not within a virtual environment as troubleshooting package conflicts can be next to impossible.
+  我们强烈建议你在虚拟环境中安装 faceswap。事实上，我们一般不会支持不在虚拟环境中的安装，因为排除软件包的冲突几乎是不可能的。
 
-  If using Conda3 then setting up virtual environments is relatively straight forward. More information can be found at [Conda Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+  如果使用Conda3，那么设置虚拟环境是相对直接的。更多信息可以在 [Conda Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) 找到。
 
-  If using a default Python distribution then [virtualenv](https://github.com/pypa/virtualenv) and [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io) may help when you are not using docker.
-
+  如果使用默认的Python发行版，那么当你不使用docker时，[virtualenv](https://github.com/pypa/virtualenv)和[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io)可能有所帮助。
 
 ## Getting the faceswap code
-It is recommended to clone the repo with git instead of downloading the code from http://github.com/deepfakes/faceswap and extracting it as this will make it far easier to get the latest code (which can be done from the GUI). To clone a repo you can either use the Git GUI for your distribution or open up a command prompt, enter the folder where you want to store faceswap and enter:
+建议用 git 克隆 repo，而不是从 http://github.com/deepfakes/faceswap 下载代码并解压，因为这将使你更容易获得最新的代码（这可以从 GUI 中完成）。要克隆一个 repo，你可以使用你的发行版的 Git GUI，或者打开一个命令提示符，输入你要存储 faceswap 的文件夹，然后输入。
 ```bash
 git clone https://github.com/deepfakes/faceswap.git
 ```
 
-
 ## Setup
-Enter your virtual environment and then enter the folder that faceswap has been downloaded to and run:
+进入你的虚拟环境，然后进入 faceswap 被下载到的文件夹并运行。
 ```bash
 python setup.py
 ```
-If setup fails for any reason you can still manually install the packages listed within requirements.txt
+如果由于任何原因安装失败，你仍然可以手动安装requirements.txt中列出的软件包。
 
 ### About some of the options
    - CUDA: For acceleration. Requires a good nVidia Graphics Card (which supports CUDA inside)
@@ -265,7 +260,7 @@ INFO    All python3 dependencies are met.
 ```
 
 ## Run the project
-Once all these requirements are installed, you can attempt to run the faceswap tools. Use the `-h` or `--help` options for a list of options.
+一旦所有这些要求被安装，你就可以尝试运行facewap工具。使用`-h`或`-help`选项可以获得一个选项列表。
 
 ```bash
 python faceswap.py -h
@@ -280,6 +275,5 @@ python faceswap.py gui
 Proceed to [../blob/master/USAGE.md](USAGE.md)
 
 ## Notes
-This guide is far from complete. Functionality may change over time, and new dependencies are added and removed as time goes on. 
-
+本指南还远未完成。功能可能会随着时间的推移而改变，而且随着时间的推移，新的依赖性也会被添加和删除。
 If you are experiencing issues, please raise them in the [faceswap Forum](https://faceswap.dev/forum) instead of the main repo. Usage questions raised in the issues within this repo are liable to be closed without response.

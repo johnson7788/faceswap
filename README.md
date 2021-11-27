@@ -1,7 +1,7 @@
 # deepfakes_faceswap
 <p align="center">
   <a href="https://faceswap.dev"><img src="https://i.imgur.com/zHvjHnb.png"></img></a>
-<br />FaceSwap is a tool that utilizes deep learning to recognize and swap faces in pictures and videos.
+<br />FaceSwap是一个利用深度学习来识别和交换图片和视频中人脸的工具。
 </p>
 <p align="center">
 <img src = "https://i.imgur.com/nWHFLDf.jpg"></img>
@@ -54,66 +54,78 @@ Make sure you check out [INSTALL.md](INSTALL.md) before getting started.
 
 # Manifesto
 
-## FaceSwap has ethical uses.
+## FaceSwap道德方面。
+当换脸技术第一次被开发和发表时，这项技术是开创性的，它是人工智能发展的一个巨大步。
+它也被学术界以外的人完全忽视，因为代码是混乱和零散的。
+它需要对复杂的人工智能技术有透彻的了解，并且需要花费大量的精力来弄清楚。
+直到有个人把它汇集成一个单一的、有凝聚力的集合。
+它运行了，工作了，就像互联网上出现的新技术一样，它立即被用来创造不适当的内容。
+尽管该软件最初被赋予了不恰当的用途，但它是第一个任何人都可以下载、运行并通过实验学习的人工智能代码，而无需拥有数学、计算机理论、心理学等方面的博士学位。
+在 "深度造假 "之前，这些技术就像黑魔法一样，只有那些能够理解深奥和无尽复杂的书籍和论文中所描述的所有内部运作的人，才会去实践。
+"Deepfakes "改变了这一切，任何人都可以参与AI开发。
+对我们这些开发者来说，这段代码的发布开启了一个奇妙的学习机会。
+它使我们能够在其他人开发的想法的基础上，与各种熟练的编码员合作，在学习新技能的同时尝试人工智能，并最终为一项新兴的技术做出贡献，随着它的发展，它将看到更多的主流应用。
+是否有一些人在用类似的软件做可怕的事情？是的。
+也正因为如此，开发人员一直在严格遵守道德标准。
+我们中的许多人甚至不使用它来创建视频，我们只是修补代码，看看它能做什么。
+可悲的是，媒体只集中在这个软件的不道德用途上。不幸的是，这是它第一次暴露在公众面前的性质，但这并不代表它被创造的原因，我们现在如何使用它，或者我们看到它的未来。
+像任何技术一样，它可以被用来做好事，也可以被滥用。
+我们打算在开发FaceSwap的过程中，尽量减少它被滥用的可能性，同时最大限度地发挥它作为学习、实验以及合法换脸的工具的潜力。
 
-When faceswapping was first developed and published, the technology was groundbreaking, it was a huge step in AI development. It was also completely ignored outside of academia because the code was confusing and fragmentary. It required a thorough understanding of complicated AI techniques and took a lot of effort to figure it out. Until one individual brought it together into a single, cohesive collection. It ran, it worked, and as is so often the way with new technology emerging on the internet, it was immediately used to create inappropriate content. Despite the inappropriate uses the software was given originally, it was the first AI code that anyone could download, run and learn by experimentation without having a Ph.D. in math, computer theory, psychology, and more. Before "deepfakes" these techniques were like black magic, only practiced by those who could understand all of the inner workings as described in esoteric and endlessly complicated books and papers.
+我们并不是要诋毁名人或贬低任何人。我们是程序员，我们是工程师，我们是好莱坞VFX艺术家，我们是活动家，我们是业余爱好者，我们是人类。
+为此，我们觉得现在是时候对这个软件是什么和不是什么做出一个标准声明了，就我们这些开发者而言。
 
-"Deepfakes" changed all that and anyone could participate in AI development. To us, developers, the release of this code opened up a fantastic learning opportunity. It allowed us to build on ideas developed by others, collaborate with a variety of skilled coders, experiment with AI whilst learning new skills and ultimately contribute towards an emerging technology which will only see more mainstream use as it progresses.
+- FaceSwap不是为了创造不适当的内容。
+- FaceSwap不用于未经同意或意图隐瞒而改变面孔的行为。
+- FaceSwap不是为了任何非法的、不道德的或有问题的目的。
+- FaceSwap的存在是为了实验和发现人工智能技术，用于社会或政治评论，用于电影，以及用于任何数量的道德和合理的用途。
 
-Are there some out there doing horrible things with similar software? Yes. And because of this, the developers have been following strict ethical standards. Many of us don't even use it to create videos, we just tinker with the code to see what it does. Sadly, the media concentrates only on the unethical uses of this software. That is, unfortunately, the nature of how it was first exposed to the public, but it is not representative of why it was created, how we use it now, or what we see in its future. Like any technology, it can be used for good or it can be abused. It is our intention to develop FaceSwap in a way that its potential for abuse is minimized whilst maximizing its potential as a tool for learning, experimenting and, yes, for legitimate faceswapping.
+我们对FaceSwap可以被用来做不道德和不光彩的事情感到非常不安。
+然而，我们支持开发可以道德地使用的工具和技术，以及为任何想亲身学习的人提供人工智能方面的教育和经验。
+我们将对任何将此软件用于任何不道德的目的的人采取零容忍的态度，并将积极阻止任何此类使用。
 
-We are not trying to denigrate celebrities or to demean anyone. We are programmers, we are engineers, we are Hollywood VFX artists, we are activists, we are hobbyists, we are human beings. To this end, we feel that it's time to come out with a standard statement of what this software is and isn't as far as us developers are concerned.
+# 如何设置和运行项目
+FaceSwap是一个Python程序，可以在多个操作系统上运行，包括Windows、Linux和MacOS。
+参见[INSTALL.md](INSTALL.md)获取完整的安装说明。你将需要一个支持CUDA的现代GPU以获得最佳性能。AMD的GPU被部分支持。
 
-- FaceSwap is not for creating inappropriate content.
-- FaceSwap is not for changing faces without consent or with the intent of hiding its use.
-- FaceSwap is not for any illicit, unethical, or questionable purposes.
-- FaceSwap exists to experiment and discover AI techniques, for social or political commentary, for movies, and for any number of ethical and reasonable uses.
-
-We are very troubled by the fact that FaceSwap can be used for unethical and disreputable things. However, we support the development of tools and techniques that can be used ethically as well as provide education and experience in AI for anyone who wants to learn it hands-on. We will take a zero tolerance approach to anyone using this software for any unethical purposes and will actively discourage any such uses.
-
-# How To setup and run the project
-FaceSwap is a Python program that will run on multiple Operating Systems including Windows, Linux, and MacOS.
-
-See [INSTALL.md](INSTALL.md) for full installation instructions. You will need a modern GPU with CUDA support for best performance. AMD GPUs are partially supported.
 
 # Overview
-The project has multiple entry points. You will have to:
- - Gather photos and/or videos
- - **Extract** faces from your raw photos
- - **Train** a model on the faces extracted from the photos/videos
- - **Convert** your sources with the model
+该项目有多个进入点。你将不得不
+ - 收集照片和/或视频
+ - 从你的原始照片中提取人脸
+ - 在从照片/视频中提取的人脸上训练一个模型
+ - 用模型转换你的来源
 
-Check out [USAGE.md](USAGE.md) for more detailed instructions.
+请查看[USAGE.md](USAGE.md)，了解更详细的说明。
 
 ## Extract
-From your setup folder, run `python faceswap.py extract`. This will take photos from `src` folder and extract faces into `extract` folder.
+从你的设置文件夹，运行`python faceswap.py extract`。这将从`src`文件夹中获取照片，并将面孔提取到`extract`文件夹。
 
 ## Train
-From your setup folder, run `python faceswap.py train`. This will take photos from two folders containing pictures of both faces and train a model that will be saved inside the `models` folder.
+从你的设置文件夹，运行`python faceswap.py train`。这将从两个文件夹中获取照片，其中包含两张脸的图片，并训练一个模型，该模型将保存在`models`文件夹中。
 
 ## Convert
-From your setup folder, run `python faceswap.py convert`. This will take photos from `original` folder and apply new faces into `modified` folder.
+从你的设置文件夹，运行`python faceswap.py convert`。这将从`原始`文件夹中获取照片，并将新的面孔应用于`修改`文件夹。
 
 ## GUI
-Alternatively, you can run the GUI by running `python faceswap.py gui`
+或者，你可以通过运行`python faceswap.py gui`来运行图形用户界面。
 
 # General notes:
-- All of the scripts mentioned have `-h`/`--help` options with arguments that they will accept. You're smart, you can figure out how this works, right?!
-
-NB: there is a conversion tool for video. This can be accessed by running `python tools.py effmpeg -h`. Alternatively, you can use [ffmpeg](https://www.ffmpeg.org) to convert video into photos, process images, and convert images back to the video.
+- 所有提到的脚本都有`-h`/`-help`选项，它们会接受参数。你很聪明，你可以弄清楚这是如何工作的，对吗！？
+NB：有一个视频的转换工具。这可以通过运行`python tools.py effmpeg -h`来实现。
+  另外，你可以使用[ffmpeg](https://www.ffmpeg.org)将视频转换为照片，处理图像，并将图像转换回视频。
 
 
 **Some tips:**
-
-Reusing existing models will train much faster than starting from nothing.
-If there is not enough training data, start with someone who looks similar, then switch the data.
+重用现有的模型会比从零开始训练快得多。
+如果没有足够的训练数据，就从看起来相似的人开始，然后再换数据。
 
 # Help I need support!
 ## Discord Server
-Your best bet is to join the [FaceSwap Discord server](https://discord.gg/FC54sYg) where there are plenty of users willing to help. Please note that, like this repo, this is a SFW Server!
+你最好的选择是加入[FaceSwap Discord server](https://discord.gg/FC54sYg)，那里有很多用户愿意提供帮助。请注意，和这个软件一样，这也是一个SFW服务器
 
 ## FaceSwap Forum
-Alternatively, you can post questions in the [FaceSwap Forum](https://faceswap.dev/forum). Please do not post general support questions in this repo as they are liable to be deleted without response.
+另外，你也可以在[FaceSwap论坛]（https://faceswap.dev/forum）上发表问题。请不要在这个论坛上发布一般的支持问题，因为这些问题可能会在没有回应的情况下被删除。
 
 # Donate
 The developers work tirelessly to improve and develop FaceSwap. Many hours have been put in to provide the software as it is today, but this is an extremely time-consuming process with no financial reward. If you enjoy using the software, please consider donating to the devs, so they can spend more time implementing improvements.
@@ -147,24 +159,24 @@ Creator of the Unbalanced and OHR models, as well as expanding various capabilit
  - Go to the 'faceswap-model' to discuss/suggest/commit alternatives to the current algorithm.
 
 ## For devs
- - Read this README entirely
- - Fork the repo
- - Play with it
- - Check issues with the 'dev' tag
- - For devs more interested in computer vision and openCV, look at issues with the 'opencv' tag. Also feel free to add your own alternatives/improvements
+ -  完全阅读此README
+ - fork 该 repo
+ - 使用它
+ - 检查带有 "dev "标签的问题
+ - 对于那些对计算机视觉和openCV更感兴趣的开发者，请查看带有 "opencv "标签的问题。也可以自由地添加你自己的替代方案/改进措施
 
 ## For non-dev advanced users
- - Read this README entirely
- - Clone the repo
- - Play with it
- - Check issues with the 'advuser' tag
- - Also go to the '[faceswap Forum](https://faceswap.dev/forum)' and help others.
+ - 完全阅读此README
+ - 克隆该版本
+ - 使用它
+ - 用'advuser'标签检查问题
+ - 也可以去'[换脸论坛](https://faceswap.dev/forum)'，帮助别人。
 
 ## For end-users
- - Get the code here and play with it if you can
- - You can also go to the [faceswap Forum](https://faceswap.dev/forum) and help or get help from others.
- - Be patient. This is a relatively new technology for developers as well. Much effort is already being put into making this program easy to use for the average user. It just takes time!
- - **Notice** Any issue related to running the code has to be opened in the [faceswap Forum](https://faceswap.dev/forum)!
+ - 如果可以的话，在这里获取代码并进行使用
+ - 你也可以去[换脸论坛](https://faceswap.dev/forum)，帮助或得到别人的帮助。
+ - 要有耐心。这对开发者来说也是一个相对较新的技术。为了使这个程序对普通用户来说容易使用，已经投入了很多努力。这只是需要时间!
+ - **注意**任何与运行代码有关的问题都必须在[faceswap论坛](https://faceswap.dev/forum)上打开!
 
 ## For haters
 Sorry, no time for that.
@@ -178,12 +190,13 @@ It is a community repository for active users.
 The joshua-wu repo seems not active. Simple bugs like missing _http://_ in front of urls have not been solved since days.
 
 ## Why is it named 'deepfakes' if it is not /u/deepfakes?
- 1. Because a typosquat would have happened sooner or later as project grows
- 2. Because we wanted to recognize the original author
- 3. Because it will better federate contributors and users
+ 1. 因为随着项目的发展，打错字的情况迟早会发生。
+ 2. 因为我们想确认原作者的身份
+ 3. 因为这将更好地联合贡献者和用户
+
 
 ## What if /u/deepfakes feels bad about that?
-This is a friendly typosquat, and it is fully dedicated to the project. If /u/deepfakes wants to take over this repo/user and drive the project, he is welcomed to do so (Raise an issue, and he will be contacted on Reddit). Please do not send /u/deepfakes messages for help with the code you find here.
+这是一个友好的typosquat，它完全致力于该项目。如果/u/deepfakes想接管这个 repo/用户并推动这个项目，我们欢迎他这样做（提出一个问题，我们会在Reddit上联系他）。请不要向/u/deepfakes发送消息，寻求对你在这里找到的代码的帮助。
 
 # About machine learning
 

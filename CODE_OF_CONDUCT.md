@@ -1,41 +1,30 @@
-# Contributor Covenant Code of Conduct
+# 贡献者公约行为准则
 
 ## Our Pledge
-
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, sex characteristics, gender identity and expression,
-level of experience, education, socio-economic status, nationality, personal
-appearance, race, religion, or sexual identity and orientation.
+为了促进一个开放和欢迎的环境，我们作为贡献者和维护者承诺使参与我们的项目和我们的社区成为一个没有骚扰的经验，无论年龄、体型、残疾、种族、性别特征、性别认同和表达、经验水平、教育、社会经济地位、国籍、个人外表、种族、宗教或性认同和性取向。
 
 ## Our Standards
 
-Examples of behavior that contributes to creating a positive environment
-include:
+有助于创造一个积极环境的行为例子包括
+包括。
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
+* 使用欢迎性和包容性的语言
+* 尊重不同的观点和经验
+* 优雅地接受建设性的critic
+* 专注于对社区最有利的事情
+* 对其他社区成员表现出同情心
 
-Examples of unacceptable behavior by participants include:
+参与者不可接受的行为的例子包括。
 
-* The use of sexualized language or imagery and unwelcome sexual attention or
- advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic
- address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
- professional setting
+*  使用不文明的语言或图像，以及不受欢迎的性关注或挑逗
+*  嘲弄、侮辱/诽谤性评论以及个人或政治攻击
+*  公开或私下的骚扰
+*  未经明确许可，公布他人的私人信息，如物理或电子地址
+*  其他可以合理地认为在专业环境中不适当的行为
 
 ## Our Responsibilities
 
-Project maintainers are responsible for clarifying the standards of acceptable
-behavior and are expected to take appropriate and fair corrective action in
-response to any instances of unacceptable behavior.
+项目维护者负责澄清可接受的行为标准，并对任何不可接受的行为采取适当和公平的纠正措施。
 
 Project maintainers have the right and responsibility to remove, edit, or
 reject comments, commits, code, wiki edits, issues, and other contributions
